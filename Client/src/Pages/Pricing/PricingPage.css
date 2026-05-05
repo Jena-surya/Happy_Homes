@@ -1,0 +1,832 @@
+/* .pricing-hero{
+  height:30vh;
+  background:url("/images/pricing-hero.jpg") center/cover;
+  position:relative;
+}
+.overlay{
+  position:absolute;
+  width:100%;height:100%;
+  background:rgba(31,39,51,0.7);
+}
+.hero-text{
+  position:relative;
+  color:#fff;
+  text-align:center;
+  top:40%;
+}
+.hero-text h1{font-size:32px;font-weight:800;}
+
+.pricing-wrapper{
+  display:flex;
+  gap:30px;
+  padding:40px 80px;
+  background:#f5f6f8;
+}
+
+.left{flex:2;}
+.right{flex:1;}
+
+.box{
+  background:#fff;
+  padding:20px;
+  border-radius:10px;
+  margin-bottom:20px;
+}
+
+.box h3 span{
+  background:#0d6efd;
+  color:#fff;
+  border-radius:50%;
+  padding:5px 10px;
+  margin-right:10px;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:15px;
+}
+.grid label{font-size:12px;color:#555;}
+.grid input,.grid select{
+  padding:10px;
+  border:1px solid #ccc;
+  border-radius:6px;
+}
+
+.calc-btn{
+  margin-top:20px;
+  background:#0d6efd;
+  color:#fff;
+  padding:12px;
+  border:none;
+  border-radius:6px;
+}
+
+.table{
+  width:100%;
+  border-collapse:collapse;
+}
+.table th{
+  background:#1F2733;
+  color:#fff;
+  padding:10px;
+}
+.table td{
+  padding:10px;
+  border-bottom:1px solid #ddd;
+}
+.highlight-row{background:#e9f1fb;}
+
+.note{font-size:12px;margin-top:10px;}
+
+.calc-row{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+.calc-box{
+  background:#e9f1fb;
+  padding:15px;
+  border-radius:8px;
+}
+.total-box{
+  background:#0d6efd;
+  color:#fff;
+  padding:15px;
+  border-radius:8px;
+}
+
+.notes{
+  display:flex;
+  justify-content:space-between;
+  background:#fff;
+  padding:20px;
+  border-radius:10px;
+}
+.notes img{width:250px;border-radius:10px;}
+
+.cta{
+  display:flex;
+  justify-content:space-between;
+  background:#1F2733;
+  color:#fff;
+  padding:20px;
+  border-radius:10px;
+}
+.cta button{
+  background:#fff;
+  border:none;
+  padding:10px 20px;
+}
+
+.summary{
+  background:#fff;
+  padding:20px;
+  border-radius:10px;
+}
+.summary h2{color:#0d6efd;}
+
+.pdf{
+  width:100%;
+  background:green;
+  color:#fff;
+  padding:10px;
+  margin-top:10px;
+}
+.wa{
+  width:100%;
+  background:#25D366;
+  color:#fff;
+  padding:10px;
+  margin-top:10px;
+}
+
+
+
+
+@media (max-width: 768px) {
+
+  .pricing-wrapper {
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .left, .right {
+    width: 100%;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .calc-row {
+    flex-wrap: wrap;              
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .calc-box,
+  .total-box {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .notes {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .notes img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .cta {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .cta button {
+    width: 100%;
+  }
+
+  .summary {
+    margin-top: 10px;
+  }
+
+  .summary h2 {
+    font-size: 22px;
+  }
+
+  .pdf,
+  .wa {
+    width: 100%;
+    padding: 12px;
+  }
+} */
+
+
+/* .pricing-hero {
+  height: 30vh;
+  background: url("/images/pricing-hero.jpg") center/cover;
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(31, 39, 51, 0.7);
+}
+
+.hero-text {
+  position: relative;
+  color: #fff;
+  text-align: center;
+  top: 40%;
+}
+
+.hero-text h1 {
+  font-size: 32px;
+  font-weight: 800;
+}
+
+.pricing-wrapper {
+  display: flex;
+  gap: 30px;
+  padding: 40px 80px;
+  background: #f5f6f8;
+}
+
+.left {
+  flex: 2;
+}
+
+.right {
+  flex: 1;
+}
+
+.box {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.box h3 {
+  margin-bottom: 15px;
+}
+
+.box h3 span {
+  background: #0d6efd;
+  color: #fff;
+  border-radius: 50%;
+  padding: 5px 10px;
+  margin-right: 10px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 15px;
+  align-items: end;
+}
+
+.grid div {
+  display: flex;
+  flex-direction: column;
+}
+
+.grid label {
+  font-size: 12px;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.grid input,
+.grid select {
+  width: 100%;
+  height: 42px;
+  padding: 0 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.calc-btn {
+  margin-top: 20px;
+  background: #0d6efd;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.calc-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.calc-box {
+  background: #e9f1fb;
+  padding: 12px 15px;
+  border-radius: 8px;
+}
+
+.total-box {
+  background: #0d6efd;
+  color: #fff;
+  padding: 12px 15px;
+  border-radius: 8px;
+}
+
+.notes {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.notes img {
+  width: 250px;
+  border-radius: 10px;
+}
+
+.cta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1F2733;
+  color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.cta button {
+  background: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.summary {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+.summary h3 {
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.summary p {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.summary b {
+  font-weight: 600;
+}
+
+.summary hr {
+  margin: 15px 0;
+  border: none;
+  border-top: 1px solid #ddd;
+}
+
+.summary h2 {
+  color: #0d6efd;
+  font-size: 26px;
+  margin-top: 10px;
+}
+
+.pdf {
+  width: 100%;
+  background: green;
+  color: #fff;
+  padding: 12px;
+  margin-top: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.wa {
+  width: 100%;
+  background: #25D366;
+  color: #fff;
+  padding: 12px;
+  margin-top: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+  .pricing-wrapper {
+    flex-direction: column;
+    padding: 30px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr); 
+  }
+}
+
+@media (max-width: 768px) {
+
+  .pricing-wrapper {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr); 
+  }
+
+  .calc-row {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .notes {
+    flex-direction: column;
+  }
+
+  .notes img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .cta {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .cta button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .grid {
+    grid-template-columns: 1fr; 
+  }
+
+}
+
+
+
+.calc-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  flex-wrap: nowrap; 
+}
+
+.group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.result {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+@media (max-width: 768px) {
+
+  .calc-row {
+    flex-direction: column; 
+    align-items: center;
+  }
+
+  .group {
+    flex-wrap: wrap; 
+    justify-content: center;
+  }
+
+  .result {
+    margin-top: 8px;
+  }
+
+  .calc-box,
+  .total-box {
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+
+} */
+
+
+/* ================= HERO ================= */
+.pricing-hero {
+  height: 50vh;
+  background: url("/images/construction2.jpg") center/cover no-repeat;
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  margin-top: 80px; /* navbar fix */
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(31, 39, 51, 0.6);
+}
+
+.hero-text {
+  position: relative;
+  color: #fff;
+  max-width: 700px;
+  padding: 0 20px;
+}
+
+.hero-text h1 {
+  font-size: 36px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.hero-text p {
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+/* ================= MAIN ================= */
+.pricing-wrapper {
+  display: flex;
+  gap: 30px;
+  padding: 40px 80px;
+  background: #f5f6f8;
+}
+
+.left { flex: 2; }
+.right { flex: 1; }
+
+/* ================= BOX ================= */
+.box {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.box h3 {
+  margin-bottom: 15px;
+}
+
+.box h3 span {
+  background: #0d6efd;
+  color: #fff;
+  border-radius: 50%;
+  padding: 5px 10px;
+  margin-right: 10px;
+}
+
+/* ================= GRID ================= */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  align-items: end;
+}
+
+.grid div {
+  display: flex;
+  flex-direction: column;
+}
+
+.grid label {
+  font-size: 12px;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.grid input,
+.grid select {
+  width: 100%;
+  height: 42px;
+  padding: 0 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+/* ================= BUTTON ================= */
+.calc-btn {
+  margin-top: 20px;
+  background: #0d6efd;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* ================= CALC ================= */
+.calc-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+/* LEFT SIDE */
+.group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* RIGHT SIDE */
+.result {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.calc-box {
+  background: #e9f1fb;
+  padding: 12px 15px;
+  border-radius: 8px;
+}
+
+.total-box {
+  background: #0d6efd;
+  color: #fff;
+  padding: 12px 15px;
+  border-radius: 8px;
+}
+
+/* ================= NOTES ================= */
+.notes {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.notes img {
+  width: 250px;
+  border-radius: 10px;
+}
+
+/* ================= CTA ================= */
+.cta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1F2733;
+  color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.cta button {
+  background: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+/* ================= SUMMARY ================= */
+.summary {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+.summary h3 {
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.summary p {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.summary hr {
+  margin: 15px 0;
+  border: none;
+  border-top: 1px solid #ddd;
+}
+
+.summary h2 {
+  color: #0d6efd;
+  font-size: 26px;
+  margin-top: 10px;
+}
+
+/* BUTTONS */
+.pdf {
+  width: 100%;
+  background: green;
+  color: #fff;
+  padding: 12px;
+  margin-top: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.wa {
+  width: 100%;
+  background: #25D366;
+  color: #fff;
+  padding: 12px;
+  margin-top: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+/* ================= TABLET ================= */
+@media (max-width: 1024px) {
+  .pricing-wrapper {
+    flex-direction: column;
+    padding: 30px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+
+  .pricing-hero {
+    height: 40vh;
+    margin-top: 70px;
+  }
+
+  .hero-text h1 {
+    font-size: 22px;
+  }
+
+  .hero-text p {
+    font-size: 13px;
+  }
+
+  .pricing-wrapper {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* 🔥 CALC FIX */
+  .calc-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .group {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .result {
+    margin-top: 10px;
+  }
+
+  .calc-box,
+  .total-box {
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+
+  /* NOTES */
+  .notes {
+    flex-direction: column;
+  }
+
+  .notes img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  /* CTA */
+  .cta {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .cta button {
+    width: 100%;
+  }
+}
+
+/* ================= SMALL MOBILE ================= */
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

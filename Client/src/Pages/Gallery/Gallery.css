@@ -1,0 +1,141 @@
+/* HERO */
+.gallery-hero {
+  width: 100%;
+  height: 40vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery-hero .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(31, 39, 51, 0.7);
+}
+
+.gallery-hero h1 {
+  position: relative;
+  color: #fff;
+  font-size: 36px;
+   font-weight: 800;
+}
+
+/* CONTAINER */
+.gallery-container {
+  padding: 60px 80px;
+  scroll-behavior: none;
+}
+
+/* SECTION */
+.gallery-section {
+  margin-bottom: 50px;
+}
+
+.gallery-section h2 {
+  margin-bottom: 15px;
+}
+
+/* SLIDER */
+.slider-wrapper {
+  position: relative;
+}
+
+/* .slider {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+} */
+
+.slider {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+
+  /* 🔥 HIDE SCROLLBAR */
+  scrollbar-width: none;        /* Firefox */
+  -ms-overflow-style: none;     /* IE & Edge */
+}
+
+.slider::-webkit-scrollbar {
+  display: none;                /* Chrome, Safari */
+}
+
+.slider img {
+  width: 250px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* ARROWS */
+.arrow {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  background: #1F2733;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 2;
+  border-radius: 50%;
+}
+
+.arrow.left {
+  left: -10px;
+}
+
+.arrow.right {
+  right: -10px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .gallery-container {
+    padding: 40px 20px;
+  }
+
+  .arrow {
+    display: none; /* 🔥 mobile me hide */
+  }
+
+  .slider img {
+    width: 200px;
+    height: 140px;
+  }
+}
+
+
+
+
+.gallery-hero {
+  position: relative;
+  overflow: hidden; /* 🔥 important */
+}
+
+.gallery-hero .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  background: url("/images/construction2.jpg");
+  background-size: cover;
+  background-position: center;
+
+  filter: blur(6px);
+  transform: scale(1.1);
+
+  z-index: 1;
+}
+
+.gallery-hero h1 {
+  position: relative;
+  z-index: 2; /* 🔥 text upar */
+}

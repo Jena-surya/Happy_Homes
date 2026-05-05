@@ -1,0 +1,122 @@
+/* FULL PAGE CENTER */
+.careers-page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #f5f7fa, #ffffff);
+  font-family: Arial, sans-serif;
+  margin-top: 70px;
+}
+
+/* BOX */
+.careers-box {
+  text-align: center;
+  background: white;
+  padding: 50px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  max-width: 400px;
+  width: 90%;
+}
+
+/* LOGO */
+.logo {
+  width: 120px;
+  margin-bottom: 20px;
+}
+
+/* TEXT */
+.careers-box h1 {
+  margin-bottom: 10px;
+}
+
+.careers-box p {
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* BUTTON */
+.careers-box button {
+  background: #ff6600;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.careers-box button:hover {
+  background: #e65c00;
+}
+
+/* MODAL */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  width: 300px;
+  position: relative;
+}
+
+/* .modal input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+} */
+
+.modal input {
+  width: 100%;
+  height: 45px;             /* 🔥 same height as login */
+  padding: 0 12px;
+  margin: 12px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+  transition: 0.2s;
+}
+
+.modal input:focus {
+  border-color: #ff6600;
+}
+.modal button {
+  width: 100%;
+  /* background: #ff6600; */
+  background: #f4c430;
+  color: white;
+  padding: 10px;
+  border: none;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+/* RESPONSIVE */
+@media (max-width: 480px) {
+  .careers-box {
+    padding: 30px;
+  }
+  .careers-page{
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}

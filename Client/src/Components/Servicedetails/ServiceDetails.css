@@ -1,0 +1,222 @@
+/* HERO */
+.service-hero {
+  height: 50vh; /* 🔥 reduced */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.service-hero h1 {
+  position: relative;
+  color: #fff;
+  font-size: 36px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+/* BODY */
+.service-body {
+  padding: 80px;
+  background: #f5f6f8;
+}
+
+.service-container {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+/* IMAGE BIGGER 🔥 */
+.service-image img {
+  width: 100%;
+  max-width: 600px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* TEXT */
+.service-text {
+  max-width: 600px;
+  font-size: 17px;
+  line-height: 1.9;
+  color: #444;
+}
+
+/* BUTTON 🔥 */
+.read-btn {
+  margin-top: 15px;
+  padding: 10px 18px;
+  background: #1F2733;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.read-btn:hover {
+  background: #f4c430;
+  color: #000;
+}
+
+/* TEXT */
+.service-text {
+  max-width: 600px;
+  font-size: 17px;
+  line-height: 1.9;
+  color: #444;
+
+  max-height: 120px; /* 🔥 default small */
+  overflow: hidden;
+  position: relative;
+}
+
+/* EXPANDED STATE */
+.service-text.expanded {
+  max-height: 300px; /* 🔥 fixed height */
+  overflow-y: auto;  /* 🔥 SCROLL ENABLE */
+  padding-right: 10px;
+}
+
+/* OPTIONAL: smooth scroll look */
+.service-text.expanded::-webkit-scrollbar {
+  width: 6px;
+}
+
+.service-text.expanded::-webkit-scrollbar-thumb {
+  background: #999;
+  border-radius: 5px;
+}
+
+.service-text.expanded {
+  scroll-behavior: smooth;
+}
+
+
+/* WRAPPER */
+.service-text-wrapper {
+  max-width: 600px;
+}
+
+/* TEXT BOX */
+.service-text {
+  font-size: 17px;
+  line-height: 1.9;
+  color: #444;
+
+  max-height: 120px;
+  overflow: hidden;
+}
+
+/* EXPANDED */
+.service-text.expanded {
+  max-height: 300px;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+/* SCROLLBAR */
+.service-text.expanded::-webkit-scrollbar {
+  width: 6px;
+}
+
+.service-text.expanded::-webkit-scrollbar-thumb {
+  background: #999;
+  border-radius: 5px;
+}
+
+/* BUTTON */
+.read-btn {
+  margin-top: 12px;
+  padding: 10px 18px;
+  background: #1F2733;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.read-btn:hover {
+  background: #f4c430;
+  color: #000;
+}
+
+/* WRAPPER = IMAGE HEIGHT MATCH */
+.service-text-wrapper {
+  max-width: 600px;
+  height: 400px; /* 🔥 same as image */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* TEXT BOX */
+.service-text {
+  font-size: 17px;
+  line-height: 1.9;
+  color: #444;
+
+  overflow: hidden;
+}
+
+/* DEFAULT (SHORT VIEW) */
+.service-text:not(.expanded) {
+  max-height: 300px; /* 🔥 adjust */
+}
+
+/* EXPANDED */
+.service-text.expanded {
+  max-height: 100%;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+/* BUTTON ALWAYS BOTTOM */
+.read-btn {
+  margin-top: 10px;
+  padding: 10px 18px;
+  background: #1F2733;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.read-btn:hover {
+  background: #f4c430;
+  color: #000;
+}
+/* MOBILE */
+@media (max-width: 768px) {
+  .service-hero {
+    height: 35vh;
+  }
+
+  .service-hero h1 {
+    font-size: 24px;
+  }
+
+  .service-body {
+    padding: 40px 20px;
+  }
+
+  .service-container {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .service-image img {
+    height: 250px;
+  }
+
+  .service-text {
+    font-size: 14px;
+  }
+}
