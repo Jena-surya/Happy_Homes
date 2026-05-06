@@ -1310,8 +1310,8 @@ export const PricingPage = () => {
     const fetchPrice = async () => {
       try {
         const res = await fetch(
-          `http://localhost:8089/api/pricing/calculate?category=${category}&service=${service}&material=${material}`,
-        );
+  `${import.meta.env.VITE_API_URL}/api/pricing/calculate?category=${category}&service=${service}&material=${material}`,
+);
 
         if (!res.ok) return;
 
