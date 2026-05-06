@@ -236,7 +236,7 @@ export const Contact = () => {
               }}
             >
               <FaEnvelope className="icon" />
-              <p>support@happyhomes.com</p>
+              <p>support@happyhomeservice.co.in</p>
             </div>
           </div>
         </div>
