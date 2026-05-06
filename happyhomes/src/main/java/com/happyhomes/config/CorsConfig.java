@@ -16,6 +16,7 @@ public class CorsConfig {
                 registry.addMapping("/**")
 //                        .allowedOrigins("http://localhost:5173") // 🔥 frontend URL
                         .allowedOriginPatterns("http://localhost:5173")
+                        .allowedOriginPatterns("http:/www.happyhomeservice.co.in")
                         .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                         .allowedHeaders("*")
                         .allowCredentials(true);
