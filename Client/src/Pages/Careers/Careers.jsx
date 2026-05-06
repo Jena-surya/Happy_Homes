@@ -24,7 +24,7 @@ export const Careers = () => {
     e.preventDefault();
 
     try {
-      const res = await fetch("http://localhost:8089/api/careers/apply", {
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/api/careers/apply`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
