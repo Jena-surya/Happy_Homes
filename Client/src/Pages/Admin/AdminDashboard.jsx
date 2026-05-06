@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./AdminDashboard.css";
+const API_BASE_URL = import.meta.env.VITE_API_URL;
 export const AdminDashboard = () => {
   const [active, setActive] = useState("pricing");
 
@@ -130,7 +131,7 @@ const PricingForm = () => {
 
   const handleSubmit = async () => {
     try {
-      const res = await fetch("http://localhost:8089/api/pricing/add", {
+      const res = await fetch(`${API_BASE_URL}/api/pricing/add`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -236,7 +237,7 @@ const AppliedList = () => {
   const fetchData = () => {
     const token = localStorage.getItem("token");
 
-    fetch("http://localhost:8089/api/careers/all", {
+    fetch(`${API_BASE_URL}/api/careers/all`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -257,9 +258,7 @@ const AppliedList = () => {
     if (!confirmDelete) return;
 
     try {
-      const res = await fetch(
-        `http://localhost:8089/api/careers/delete/${id}`,
-        {
+      const res = await fetch(`${API_BASE_URL}/api/careers/delete/${id}`, {
           method: "DELETE",
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -335,7 +334,7 @@ const GalleryUpload = () => {
     formData.append("file", file);
 
     try {
-      const res = await fetch("http://localhost:8089/api/gallery/upload", {
+      const res = await fetch(`${API_BASE_URL}/api/gallery/upload`, {
         method: "POST",
         headers: {
           Authorization: "Bearer " + localStorage.getItem("token"),
@@ -383,7 +382,7 @@ const ManageGallery = () => {
   const [images, setImages] = useState([]);
 
   const fetchImages = async (cat) => {
-    const res = await fetch(`http://localhost:8089/api/gallery/${cat}`);
+    const res = await fetch(`${API_BASE_URL}/api/gallery/${cat}`);
     const data = await res.json();
     setImages(data);
   };
@@ -422,9 +421,7 @@ const ManageGallery = () => {
     if (!window.confirm("Delete this image?")) return;
 
     try {
-      const res = await fetch(
-        `http://localhost:8089/api/gallery/delete/${id}`,
-        {
+      const res = await fetch(`${API_BASE_URL}/api/gallery/delete/${id}`, {
           method: "DELETE",
           headers: {
             Authorization: "Bearer " + localStorage.getItem("token"),
@@ -475,7 +472,7 @@ const ContactList = () => {
   const [data, setData] = useState([]);
 
   const fetchData = () => {
-    fetch("http://localhost:8089/api/contact/all", {
+    fetch(`${API_BASE_URL}/api/contact/all`, {
       headers: {
         Authorization: "Bearer " + localStorage.getItem("token"),
       },
@@ -491,7 +488,7 @@ const ContactList = () => {
   const handleDelete = async (id) => {
     if (!window.confirm("Delete?")) return;
 
-    await fetch(`http://localhost:8089/api/contact/delete/${id}`, {
+    await fetch(`${API_BASE_URL}/api/contact/delete/${id}`, {
       method: "DELETE",
       headers: {
         Authorization: "Bearer " + localStorage.getItem("token"),
