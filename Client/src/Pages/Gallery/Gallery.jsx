@@ -134,7 +134,7 @@ export const Gallery = () => {
 
     for (let cat of categories) {
       try {
-        const res = await fetch(`http://localhost:8089/api/gallery/${cat}`);
+        const res = await fetch(`${import.meta.env.VITE_API_URL}/api/gallery/${cat}`);
         const json = await res.json();
 
         updatedData[cat] = json.map((i) => i.imageUrl);
