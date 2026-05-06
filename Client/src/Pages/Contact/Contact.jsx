@@ -114,7 +114,7 @@ export const Contact = () => {
     e.preventDefault();
 
     try {
-      const res = await fetch("http://localhost:8089/api/contact/save", {
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/api/contact/save`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
