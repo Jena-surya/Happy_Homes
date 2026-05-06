@@ -11,7 +11,7 @@ export const Hero = () => {
       {/* CONTENT */}
       <div className="hero-content">
         <h1>
-          WELCOME to HAPPY HOMES <br /> CONSTRUCTION
+          WELCOME to HAPPY HOMES <br /> SERVICES
         </h1>
 
         <p>
