@@ -80,7 +80,7 @@ export const Footer = () => {
 
           <div className="info">
             <FaEnvelope />
-            <p>happyhomes@gmail.com</p>
+            <p>official@happyhomeservice.co.in</p>
           </div>
         </div>
       </div>
