@@ -130,7 +130,7 @@ public class SecurityConfig {
 
                         // 🔥 VERY IMPORTANT
                         .requestMatchers(HttpMethod.OPTIONS, "/**").permitAll()
-
+                        .requestMatchers(HttpMethod.POST, "/api/pricing/add").permitAll()
                         .requestMatchers("/api/admin/login").permitAll()
                         .requestMatchers("/api/pricing/**").permitAll()
                         .requestMatchers("/api/careers/apply").permitAll()
