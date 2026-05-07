@@ -129,28 +129,59 @@ const PricingForm = () => {
     });
   };
 
+//   const handleSubmit = async () => {
+//     try {
+//       const res = await fetch(`${API_BASE_URL}/api/pricing/add`, {
+//         method: "POST",
+//         // headers: {
+//         //   "Content-Type": "application/json",
+//         //   Authorization: "Bearer " + localStorage.getItem("token"),
+//         // },
+//         headers: {
+//   "Content-Type": "application/json",
+// },
+//         body: JSON.stringify(form),
+//       });
+
+//       if (!res.ok) throw new Error("Error");
+
+//       alert("Saved Successfully ✅");
+//     } catch (err) {
+//       alert("Error saving ❌");
+//       console.error(err);
+//     }
+//   };
+
+
+
   const handleSubmit = async () => {
-    try {
-      const res = await fetch(`${API_BASE_URL}/api/pricing/add`, {
-        method: "POST",
-        // headers: {
-        //   "Content-Type": "application/json",
-        //   Authorization: "Bearer " + localStorage.getItem("token"),
-        // },
-        headers: {
-  "Content-Type": "application/json",
-},
-        body: JSON.stringify(form),
-      });
+  try {
+    const res = await fetch(`${API_BASE_URL}/api/pricing/add`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(form),
+    });
 
-      if (!res.ok) throw new Error("Error");
+    // 🔥 IMPORTANT
+    const text = await res.text();
 
-      alert("Saved Successfully ✅");
-    } catch (err) {
-      alert("Error saving ❌");
-      console.error(err);
+    console.log("STATUS:", res.status);
+    console.log("RESPONSE:", text);
+
+    if (!res.ok) {
+      alert("Error Saving ❌ " + res.status);
+      return;
     }
-  };
+
+    alert("Saved Successfully ✅");
+
+  } catch (err) {
+    console.error("FULL ERROR:", err);
+    alert("Error saving ❌");
+  }
+};
 
   return (
     <div className="form-card">
