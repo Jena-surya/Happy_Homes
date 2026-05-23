@@ -88,7 +88,7 @@ export const Footer = () => {
       {/* BOTTOM */}
       <div className="footer-bottom">
         <p>
-          2026 © Copyright – All Rights Reserved Happy Homes. Developed By{" "}
+          2026 © Copyright – All Rights Reserved Happy Homes Services. Developed By{" "}
           <a
             href="https://www.landminesoft.com"
             target="_blank"
