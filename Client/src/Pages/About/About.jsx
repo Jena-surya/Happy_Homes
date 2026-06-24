@@ -146,7 +146,6 @@ export const About = () => {
     </div>
 
   </div>
-</di
-  v>
+</div>
   );
 };
