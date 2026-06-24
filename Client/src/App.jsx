@@ -93,6 +93,7 @@ import { Gallery } from "./Pages/Gallery/Gallery";
 import { PricingPage } from "./Pages/Pricing/PricingPage";
 import { Careers } from "./Pages/Careers/Careers";
 import Login from "./Pages/Login/Login";
+import ScrollToTop from "./Components/ScrollToTop";
 
 import { AdminDashboard } from "./Pages/Admin/AdminDashboard";
 
@@ -107,9 +108,11 @@ const ProtectedRoute = ({ children }) => {
 const App = () => {
   return (
     <>
-      <Nav />
+  <ScrollToTop />
 
-      <Routes>
+  <Nav />
+
+  <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/maintenance" element={<MaintenancePage />} />
         <Route path="/interior" element={<InteriorPage />} />
