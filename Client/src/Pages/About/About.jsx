@@ -98,16 +98,55 @@ export const About = () => {
         </div>
       </div>
 
-      {/* TEAM */}
-      <div className="about-section light">
-        <h2 className="center">Our Team</h2>
-        <p className="center max">
-          Our team is made up of experienced engineers, designers, and skilled
-          workers who are passionate about delivering excellence. Their
-          dedication and expertise ensure that every project meets the highest
-          standards of quality and safety.
-        </p>
-      </div>
+     {/* LEADERSHIP TEAM */}
+<div className="about-section light">
+  <h2 className="center">Leadership Team</h2>
+
+  {/* Founder */}
+  <div className="founder-card">
+    <img src="/images/founder.jpg" alt="Founder" />
+
+    <div className="founder-content">
+      <h3>Pritam kumar jena</h3>
+      <h4>Founder</h4>
+
+      <p>
+        As the Founder of Happy Home Services,pritam
+        leads the company with a vision of delivering high-quality
+        construction, renovation, interior, and maintenance solutions.
+        His commitment to innovation, customer satisfaction, and quality
+        workmanship drives the company's continued growth and success.
+      </p>
     </div>
+  </div>
+
+  {/* Co-Founder*/}
+  <div className="team-cards">
+
+    <div className="team-card">
+      <img src="/images/cofounder.jpg" alt="Co-Founder" />
+      <h3>Amitav Mohanty</h3>
+      <h4>Co-Founder</h4>
+
+      <p>
+        Oversees business operations, project planning, and client
+        relationship management to ensure seamless project execution.
+      </p>
+    </div>
+
+    <div className="team-card">
+      <img src="/images/partner.jpg" alt="Partner" />
+      <h3>Partha sarathi jena </h3>
+      <h4>Business Partner</h4>
+
+      <p>
+        Contributes to strategic growth, partnerships, and operational
+        excellence while supporting the company's long-term vision.
+      </p>
+    </div>
+
+  </div>
+</di
+  v>
   );
 };
